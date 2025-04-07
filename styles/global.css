@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+    /*deixa font mais suave/fina*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /*color base*/
+    --background-color: #09090B;
+    --surface-color: #18181B;
+    --stroke-color: #27272A;
+
+    /*color text*/
+    --text-color-secondary: #A1A1AA;
+    --text-color-primary: #F4F4F5;
+
+    /*color brand*/
+    --brand-gradient: linear-gradient(#FC4A1A, #F7B733);
+    --brand-color-primary: #F7B733;
+    --brand-color-secondary: #FC4A1A;
+
+    /*Mobile*/
+    --ff-sans: "Inter", sans-serif;
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+
+    --fs-sm: 1.4rem;
+    --fs-base: 1.6rem;
+    --fs-lg: 2rem;
+    --fs-xl: 2.4rem;
+    --fs-2xl: 4rem;
+
+    /*padding no eixo x (lateral)*/
+    --px-lg: 2.4rem;
+
+    /*padding no eixo y (vertical)*/
+    --py-base: 1.6rem;
+    --py-lg: 2.4rem;
+    --py-xl: 3.2rem;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    line-height: 1.6;
+    color: var(--text-color-primary);
+}
+
+body {
+    background-color: var(--background-color);
+    font-size: var(--fs-base);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--text-color-primary);
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.04em;
+}
+
+h1 {
+    font-size: var(--fs-2xl);
+}
+
+h2 {
+    font-size: var(--fs-xl);
+}
+
+h3 {
+    font-size: var(--fs-lg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    background: linear-gradient(90deg,
+    var(--brand-color-secondary) 0%,
+    var(--brand-color-primary) 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul[role='list'] {
+    list-style: none;
+}
+
+@media (width >=80em) {
+    :root {
+        --fs-lg: 3.2rem;
+        --fs-xl: 4.8rem;
+        --fs-2xl: 6.4rem;
+
+        --px-lg: 3.2rem;
+
+        --py-base: 2.4rem;
+        --py-lg: 4rem;
+        --py-xl: 8rem;
+    }
+}
